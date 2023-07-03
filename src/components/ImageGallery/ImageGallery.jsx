@@ -77,6 +77,7 @@ export class ImageGallery extends Component {
       }
 
       if (page !== 1 && page !== prevState.page) {
+        this.setState({ currentStatus: status.pending });
         fetchPictures(searchValue, page).then(({ hits: images }) => {
           this.setState(prevState => ({
             pictures: [...prevState.pictures, ...images],
