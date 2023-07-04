@@ -14,12 +14,12 @@ const options = {
   },
 };
 
-export async function fetchPictures(value, page) {
+export async function API(value, page) {
   const response = await axios.get(`?q=${value}&page=${page}`, options);
   return response.data;
 }
 
-fetchPictures.propTypes = {
+API.propTypes = {
   value: PropTypes.string.isRequired,
   page: PropTypes.number.isRequired,
 };

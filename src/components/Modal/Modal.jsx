@@ -8,13 +8,14 @@ const modalRoot = document.getElementById('modal-root');
 export class Modal extends Component {
   static propTypes = {
     onClose: PropTypes.func.isRequired,
+    largeImg: PropTypes.shape({
+      largeImageURL: PropTypes.string.isRequired,
+      tags: PropTypes.string.isRequired,
+    }).isRequired,
   };
 
   componentDidMount() {
-    const { modal } = this.props.largeImg;
-    if (modal) {
-      document.addEventListener('keydown', this.handleEscapeKey);
-    }
+    document.addEventListener('keydown', this.handleEscapeKey);
   }
 
   componentWillUnmount() {
@@ -34,8 +35,7 @@ export class Modal extends Component {
   };
 
   render() {
-    const { largeImg } = this.props.largeImg;
-    const { largeImageURL, tags } = largeImg;
+    const { largeImageURL, tags } = this.props.largeImg;
     return createPortal(
       <div className={css.Overlay} onClick={this.hendleCloseModal}>
         <div className={css.Modal}>
