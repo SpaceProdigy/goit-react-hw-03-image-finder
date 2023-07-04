@@ -145,7 +145,13 @@ export class App extends Component {
     return (
       <div className={css.App}>
         <Searchbar value={this.handleSearchValue} />
-        {currentStatus === status.idle && null}
+        {currentStatus === status.idle && (
+          <div className={css.Img}>
+            <h1 className={css.Title}>
+              Here you will find everything <br /> you were looking for
+            </h1>
+          </div>
+        )}
         {currentStatus === status.rejected && (
           <div>
             <p> Woops: {error}</p>

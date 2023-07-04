@@ -4,3 +4,31 @@
     grid-gap: 16px;
     padding-bottom: 24px;
 }
+
+.Title {
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+
+
+}
+
+.Img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url('../images/Start_img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+
+    filter: brightness(90%);
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
