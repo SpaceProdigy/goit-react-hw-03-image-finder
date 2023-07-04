@@ -33,7 +33,11 @@ export const Searchbar = props => {
         validateOnChange={false}
       >
         <Form className={css.SearchForm}>
-          <button type="submit" className={css.SearchFormButton}>
+          <button
+            type="submit"
+            title="Сlick to submit the form"
+            className={css.SearchFormButton}
+          >
             <AiOutlineSearch className={css.SearchIcon} />
           </button>
           <Field
